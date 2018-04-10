@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "643753575382",
+    "firebase_url": "https://iguardindia-1adf8.firebaseio.com",
+    "project_id": "iguardindia-1adf8",
+    "storage_bucket": "iguardindia-1adf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643753575382:android:3c6380d66fe4a0c4",
+        "android_client_info": {
+          "package_name": "com.sadaf.iguardindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643753575382-nnmtv0b5mhkvshdhqpoem4b2g9mkmmob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBklXxmVNOWwLRwAkRjYgopvv-_J8u8G7M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

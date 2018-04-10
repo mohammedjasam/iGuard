@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AAAiGuardIndia</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!--CLARIFAI STRINGS-->
+    <string name="error_external_storage_permission_not_granted">You must accept this permission so we can upload your images!</string>
+    <string name="error_while_contacting_api">Error while contacting Clarifai API</string>
+    <string name="no_results_from_api">API did not return any results</string>
+    <string name="clarifai_api_key">dd545208e41e48d9a554edbaa729a8d4</string>
+    <string name="upload_image_hint">Click the button in the bottom-right corner to upload an image!</string>
+    <string name="title_activity_visualization">Visualization</string>
+</resources>
