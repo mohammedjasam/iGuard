@@ -100,7 +100,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
             @Override
             public void onResult(@NonNull Status status){
-                updateUI(false);
+                updateUI(false, "None");
             }
         });
     }
@@ -123,24 +123,23 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
             Glide.with(this).load(img_url).into(Profile_Pic);
 
             // Updating the UI
-            updateUI(true);
+            updateUI(true, name);
         }
 
         else{
 //            Toast.makeText(getApplicationContext(), "NOOOO", Toast.LENGTH_LONG).show();
             // If the user couldn't login then you don't update the UI
-            updateUI(false);
+            updateUI(false, "None");
         }
     }
 
-    private void updateUI(boolean isLoggedIn){
+    private void updateUI(boolean isLoggedIn, String name){
         // Checking if the user successfully logged in
         if(isLoggedIn){
-            startImageAnalysis();
+            startImageAnalysis(name);
             Profile_Section.setVisibility(View.VISIBLE);
             SignIn.setVisibility(View.GONE);
             App_Logo.setVisibility(View.GONE);
-//            startImageAnalysis();
         }
         else{
             Profile_Section.setVisibility(View.GONE);
@@ -160,9 +159,9 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
-    public void startImageAnalysis() {
+    public void startImageAnalysis(String name) {
         Intent myIntent = new Intent(this, RecognizeConceptsActivity.class);
-        myIntent.putExtra("googleID", "Stark");
+        myIntent.putExtra("name", name.replaceAll("\\s+",""));
         startActivity(myIntent);
 
     }

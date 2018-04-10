@@ -19,6 +19,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.google.firebase.database.DataSnapshot;
@@ -77,8 +78,11 @@ public final class RecognizeConceptsActivity extends BaseActivity {
   // Firebase parameters
   private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
   private DatabaseReference mRootReference = firebaseDatabase.getReference();
-  private DatabaseReference mUserName = mRootReference.child("Sadaf");
-  DatabaseReference mCurrImage = mUserName.child("CurrentImage");
+  private String Username;
+//  private DatabaseReference mUserName = mRootReference.child(Username);
+  private DatabaseReference mUserName;
+//  DatabaseReference mCurrImage = mUserName.child("CurrentImage");
+  DatabaseReference mCurrImage;
 
 
     public void setmCurrImage(DatabaseReference mCurrImage) {
@@ -100,7 +104,12 @@ public final class RecognizeConceptsActivity extends BaseActivity {
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     Button photoButton = (Button) this.findViewById(R.id.button1);
-//    Button vizButton = (Button) this.findViewById(R.id.btn_viz);
+
+//    Bundle loginData = getIntent().getExtras();
+    Username = getIntent().getExtras().get("name").toString();
+    mUserName = mRootReference.child(Username);
+    mCurrImage = mUserName.child("CurrentImage");
+    Toast.makeText(getApplicationContext(), Username, Toast.LENGTH_LONG).show();
 
     photoButton.setOnClickListener(new View.OnClickListener() {
 
@@ -111,13 +120,6 @@ public final class RecognizeConceptsActivity extends BaseActivity {
       }
     });
 
-//    vizButton.setOnClickListener(new View.OnClickListener() {
-//      @Override
-//      public void onClick(View v) {
-//        Intent vizIntent = new Intent(v.getContext(), Viz.class);
-//        startActivity(vizIntent);
-//      }
-//    });
     setmCurrImage(mCurrImage);
   }
 
