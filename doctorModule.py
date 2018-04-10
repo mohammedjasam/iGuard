@@ -1,8 +1,9 @@
 import pyrebase
 from subprocess import Popen, PIPE
 import os
+import plot
 
-#need to hide the api keys
+# TODO: Hide API KEYS
 config = {
             "apiKey": "AIzaSyCJpCjOic_GUuopX-GV3NbI4Kpt-1DV-Ss",
             "authDomain": "iguardindia-1adf8.firebaseapp.com",
@@ -37,9 +38,15 @@ while(1):
     print("------------------------")
     for k, v in AIResults.items():
         print(" ", k, "    | ", v)
+    plot.viz()
+
+
 
     # Asking for updation
     inp = input("\nEnter 'Y/y' to update: ")
     print("___________________________________________________________________________________________________________________________________________________________________________________________________________")
+    os.system("clear") # Clear the screen before the update
+
+    # Break
     if not(inp == "Y" or inp == "y"):
         break
