@@ -55,11 +55,6 @@ public class Viz extends AppCompatActivity {
         t6 = (TextView)findViewById(R.id.textView16);
 
         lineChart = (LineChart)findViewById(R.id.line_chart);
-
-
-
-
-
     }
 
     @Override
@@ -69,9 +64,9 @@ public class Viz extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 CurrentImageNumber = Integer.parseInt(dataSnapshot.child("CurrentImage").getValue(String.class));
-//                getData(dataSnapshot);
 
                 Toast.makeText(getApplicationContext(), String.valueOf(CurrentImageNumber), Toast.LENGTH_LONG).show();
+
                 for (int i = 1; i <= CurrentImageNumber; i++)
                 {
                     a = Float.parseFloat(String.valueOf(dataSnapshot.child(String.valueOf(i)).child("Anger").getValue())) * 100;
