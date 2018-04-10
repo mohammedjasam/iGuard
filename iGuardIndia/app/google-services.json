@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "643753575382-o1i73l28kcuk105otvhmbl5mmtpt4h6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sadaf.iguardindia",
+            "certificate_hash": "9a4d0d4b08babb25e7183271aa52a0ba33db44b4"
+          }
+        },
+        {
           "client_id": "643753575382-nnmtv0b5mhkvshdhqpoem4b2g9mkmmob.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643753575382-nnmtv0b5mhkvshdhqpoem4b2g9mkmmob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

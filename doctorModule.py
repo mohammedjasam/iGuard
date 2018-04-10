@@ -30,15 +30,16 @@ while(1):
     AIResults = {}
 
     # Extracting the results from JSON Format
-    for i in range(1, int(Data.val()["CurrentImage"]) + 1):
+    NumImages = int(Data.val()["CurrentImage"])
+    for i in range(1, NumImages + 1):
         AIResults[i] = Data.val()[str(i)] # Stores the predictions from each image
 
     # Displaying the Results
-    print("\nImage   |  Predictions:")
-    print("------------------------")
-    for k, v in AIResults.items():
-        print(" ", k, "    | ", v)
-    plot.viz()
+    # print("\nImage   |  Predictions:")
+    # print("------------------------")
+    # for k, v in AIResults.items():
+    #     print(" ", k, "    | ", v)
+    plot.viz(AIResults, NumImages)
 
 
 

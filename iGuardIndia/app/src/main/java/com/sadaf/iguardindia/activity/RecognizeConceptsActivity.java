@@ -100,7 +100,7 @@ public final class RecognizeConceptsActivity extends BaseActivity {
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     Button photoButton = (Button) this.findViewById(R.id.button1);
-    Button vizButton = (Button) this.findViewById(R.id.btn_viz);
+//    Button vizButton = (Button) this.findViewById(R.id.btn_viz);
 
     photoButton.setOnClickListener(new View.OnClickListener() {
 
@@ -111,13 +111,13 @@ public final class RecognizeConceptsActivity extends BaseActivity {
       }
     });
 
-    vizButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent vizIntent = new Intent(v.getContext(), Viz.class);
-        startActivity(vizIntent);
-      }
-    });
+//    vizButton.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//        Intent vizIntent = new Intent(v.getContext(), Viz.class);
+//        startActivity(vizIntent);
+//      }
+//    });
     setmCurrImage(mCurrImage);
   }
 

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Sadaf\Desktop\iGuard\iGuardIndia\app\app.iml" filepath="C:\Users\Sadaf\Desktop\iGuard\iGuardIndia\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/iGuardIndia.iml" filepath="$PROJECT_DIR$/iGuardIndia.iml" />
+      <module fileurl="file://C:\Users\Sadaf\Desktop\iGuard\iGuardIndia\iGuardIndia.iml" filepath="C:\Users\Sadaf\Desktop\iGuard\iGuardIndia\iGuardIndia.iml" />
     </modules>
   </component>
 </project>

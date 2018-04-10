@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.sadaf.iguardindia.activity.RecognizeConceptsActivity;
@@ -126,6 +127,7 @@ public class GoogleSignInActivity extends AppCompatActivity implements View.OnCl
         }
 
         else{
+//            Toast.makeText(getApplicationContext(), "NOOOO", Toast.LENGTH_LONG).show();
             // If the user couldn't login then you don't update the UI
             updateUI(false);
         }
