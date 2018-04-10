@@ -34,14 +34,8 @@ while(1):
     for i in range(1, NumImages + 1):
         AIResults[i] = Data.val()[str(i)] # Stores the predictions from each image
 
-    # Displaying the Results
-    # print("\nImage   |  Predictions:")
-    # print("------------------------")
-    # for k, v in AIResults.items():
-    #     print(" ", k, "    | ", v)
+    # Visualizing the Results
     plot.viz(AIResults, NumImages)
-
-
 
     # Asking for updation
     inp = input("\nEnter 'Y/y' to update: ")

@@ -22,11 +22,11 @@ def viz(Results, NumImages):
     for k, v in Set.items():
         plt.plot(x, v)
 
-    # Naming the lines
+    # Legends for the Graph
     plt.gca().legend(('Anger', 'Disgust', 'Fear', 'Happiness', 'Sadness', 'Surprise'))
-
     plt.title('Visualizing Emotions over a period of Time')
-    plt.xlabel('Probability of Emotions')
-    plt.ylabel('Images Numbers')
+    plt.ylabel('Probability of Emotions')
+    plt.xlabel('Images Numbers')
+
     # Displaying the Graph
     plt.show()
