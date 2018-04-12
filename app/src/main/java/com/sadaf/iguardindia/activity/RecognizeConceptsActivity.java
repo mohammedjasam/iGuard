@@ -238,7 +238,7 @@ public final class RecognizeConceptsActivity extends BaseActivity {
           return;
         }
         adapter.setData(predictions.get(0).data());
-
+        //Store results from here to the Realtime Database
         String newImageNumber = String.valueOf(CurrentImageNumber + 1);
 
         mCurrImage.setValue(newImageNumber);
@@ -258,7 +258,7 @@ public final class RecognizeConceptsActivity extends BaseActivity {
 
 
 
-        //Store results from here to the Realtime Database
+
 
 
 

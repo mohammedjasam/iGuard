@@ -14,9 +14,6 @@ config = {
 # Connecting to Firebase
 Firebase = pyrebase.initialize_app(config)
 
-# Connects to the Firebase Storage
-# storage  = Firebase.storage()
-
 # Connects to Firebase Database
 Database = Firebase.database()
 

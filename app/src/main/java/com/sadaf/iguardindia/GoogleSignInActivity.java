@@ -27,7 +27,7 @@ import com.google.android.gms.common.api.Status;
 
 public class GoogleSignInActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
 
-    private LinearLayout Profile_Section;
+    private LinearLayout Profile_Section; 
     private LinearLayout App_Logo;
     private Button SignOut;
     private SignInButton SignIn;
